@@ -1,5 +1,5 @@
 
-VERSION = (1, 0, 3, 'dev')
+VERSION = (1, 0, 3, 1, 'dev')
 
 # Dynamically calculate the version based on VERSION tuple
 if len(VERSION) > 2 and VERSION[2] is not None:
