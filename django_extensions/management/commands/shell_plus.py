@@ -72,7 +72,7 @@ class Command(NoArgsCommand):
             if not _listener_enabled:
                 raise CommandError("Watchdog is required to use auto reload shell_plus.  Install via pip. (pip install watchdog)")
 
-            autoreload_path = os.environ.get('VIRTUAL_ENV', getattr(settings, 'PROJECT_ROOT', False))
+            autoreload_path = os.environ.get('PROJECT_ROOT', getattr(settings, 'VIRTUAL_ENV', False))
             if not autoreload_path:
                 raise CommandError("""To reload shell_plus automatically,
                                     you must either work in an activated
